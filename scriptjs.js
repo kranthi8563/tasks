@@ -8,13 +8,13 @@ function validateAge(today, dobobj) {
 }
 let dobelement = document.getElementById("dob");
 dobelement.addEventListener("change", () => {
-  let [y,m,d] = document.getElementById("dob").value.split("-");
-  let dob = new Date(y,m,d);
+  let [y, m, d] = document.getElementById("dob").value.split("-");
+  let dob = new Date(y, m, d);
   let Today = new Date();
   age = validateAge(Today, dob);
   if (age < 18 || age > 55) {
     dobelement.setCustomValidity("age must lie in 18 and 55 years!!!");
- 
+
     return;
   } else {
     dobelement.setCustomValidity("");
@@ -54,15 +54,15 @@ const displayEntries = () => {
   let tableDiv = document.getElementById("entrytbale");
 
   tableDiv.innerHTML = `<table>
-  <tr>
-    <th class="th">Name</th>
-    <th class="th">Email</th>
-    <th class="th">Password</th>
-    <th class="th">Dob</th>
-    <th class="th">Accepted terms?</th>
-  </tr>
-    ${rows}
-  </table>`;
+    <tr>
+      <th class="th">Name</th>
+      <th class="th">Email</th>
+      <th class="th">Password</th>
+      <th class="th">Dob</th>
+      <th class="th">Accepted terms?</th>
+    </tr>
+      ${rows}
+    </table>`;
 };
 
 // const saveUserFrom = () => {
